@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tasks.Domain\Tasks.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="FluentValidation" Version="11.9.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Abstractions\" />
+    <None Remove="Task\" />
+    <None Remove="Task\Commands\" />
+    <None Remove="Task\Queries\" />
+    <None Remove="Task\CommandHandlers\" />
+    <None Remove="Task\QueryHandlers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstractions\" />
+    <Folder Include="Task\" />
+    <Folder Include="Task\Commands\" />
+    <Folder Include="Task\Queries\" />
+    <Folder Include="Task\CommandHandlers\" />
+    <Folder Include="Task\QueryHandlers\" />
+  </ItemGroup>
+</Project>
